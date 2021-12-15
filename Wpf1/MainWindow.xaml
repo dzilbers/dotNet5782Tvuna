@@ -5,9 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf1"
         mc:Ignorable="d"
-        Title="My Window" Height="450" Width="800">
+        Title="PDBD Management" Height="374" Width="699">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="61,22,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnShalom" Content="Button" HorizontalAlignment="Left"
+                Margin="61,22,0,0" VerticalAlignment="Top"
+                Click="btnShalom_Click" MouseDoubleClick="btnShalom_DoubleClick" MouseMove="btnShalom_MouseMove" Height="37" Width="88"/>
+        <TextBox HorizontalAlignment="Left" Margin="181,41,0,0"
+                 Text="שלום" TextWrapping="Wrap" VerticalAlignment="Top"
+                 Width="120" TextAlignment="Right">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FF559F27"/>
+                    <GradientStop Color="#FFE1EA19" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
 
     </Grid>
 </Window>

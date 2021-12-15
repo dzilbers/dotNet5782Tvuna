@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson2", "Lesson2\Lesson2.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson4", "Lesson4\Lesson4.csproj", "{DDD29BFF-1334-44AB-A4B2-CABCEFA26992}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf1", "Wpf1\Wpf1.csproj", "{E164378F-6319-4D97-9AE0-506EA7B87F8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf1", "Wpf1\Wpf1.csproj", "{E164378F-6319-4D97-9AE0-506EA7B87F8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{EBBD3C02-2E53-436B-9133-500BB0EF823C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E164378F-6319-4D97-9AE0-506EA7B87F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E164378F-6319-4D97-9AE0-506EA7B87F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E164378F-6319-4D97-9AE0-506EA7B87F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBBD3C02-2E53-436B-9133-500BB0EF823C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBBD3C02-2E53-436B-9133-500BB0EF823C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBBD3C02-2E53-436B-9133-500BB0EF823C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBBD3C02-2E53-436B-9133-500BB0EF823C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

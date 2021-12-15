@@ -6,7 +6,6 @@ namespace Lesson1
     {
         static void Main(string[] args)
         {
-            B a;
             Console.WriteLine("Hello World!");
 
             Console.WriteLine("");
