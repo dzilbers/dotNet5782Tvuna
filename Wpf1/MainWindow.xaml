@@ -1,4 +1,4 @@
-﻿<Window x:Class="Wpf1.MainWindow"
+﻿<Page x:Class="Wpf1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,20 +6,32 @@
         xmlns:local="clr-namespace:Wpf1"
         mc:Ignorable="d"
         Title="PDBD Management" Height="374" Width="699">
+    <Page.Resources>
+        <Style TargetType="Button" >
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                        <GradientStop Color="#FF559F27"/>
+                        <GradientStop Color="#FFE1EA19" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Button x:Name="btnShalom" Content="Button" HorizontalAlignment="Left"
-                Margin="61,22,0,0" VerticalAlignment="Top"
-                Click="btnShalom_Click" MouseDoubleClick="btnShalom_DoubleClick" MouseMove="btnShalom_MouseMove" Height="37" Width="88"/>
-        <TextBox HorizontalAlignment="Left" Margin="181,41,0,0"
+                Margin="59,67,0,0" VerticalAlignment="Top"
+                Click="btnShalom_Click" MouseDoubleClick="btnShalom_DoubleClick"
+                MouseMove="btnShalom_MouseMove" Height="37" Width="88"
+                IsEnabled="{Binding IsChecked, ElementName=chkBox1}"/>
+        <TextBox HorizontalAlignment="Left" Margin="249,41,0,0"
                  Text="שלום" TextWrapping="Wrap" VerticalAlignment="Top"
-                 Width="120" TextAlignment="Right">
-            <TextBox.Background>
-                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
-                    <GradientStop Color="#FF559F27"/>
-                    <GradientStop Color="#FFE1EA19" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.Background>
+                 Width="120" TextAlignment="Right"
+                 Background="{Binding Source={StaticResource myBrush}}">
         </TextBox>
+        <CheckBox x:Name="chkBox1" Content="אני מקבל את תנאי השימוש"
+                  HorizontalAlignment="Left" Margin="59,41,0,0"
+                  VerticalAlignment="Top" IsChecked="True"/>
 
     </Grid>
-</Window>
+</Page>
