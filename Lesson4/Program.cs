@@ -9,7 +9,7 @@ namespace Lesson4
         {
             //PrintInfo("", typeof(MyClass));
             //Console.WriteLine("-----------------------------------");
-            //var anonymousObject = new { Id = 2222, Name = "Yossi" };
+            var anonymousObject = new { Id = 2222, Name = "Yossi" };
             //var anonymousObject2 = new { Id = 2222, Name = "Yossi" };
             //Console.WriteLine(anonymousObject.GetType().Name + ":" + anonymousObject);
             //Console.WriteLine(anonymousObject2.GetType().Name + ":" + anonymousObject2);
@@ -21,15 +21,15 @@ namespace Lesson4
             //int num = str.ToInt();
             //num = "34567".ToInt();
 
-            //object o = new object();
-            //Console.WriteLine("An Object:");
-            //o.ToStringProperty();
-            //Console.WriteLine("\nMyClass object:");
-            //new MyClass().ToStringProperty();
-            //Console.WriteLine("\nAnonymous object:");
-            //anonymousObject.ToStringProperty();
-            //Console.WriteLine("\nDateTime.Now:");
-            //DateTime.Now.ToStringProperty();
+            object o = new object();
+            Console.WriteLine("An Object:");
+            o.ToStringProperty();
+            Console.WriteLine("\nMyClass object:");
+            new MyClass().ToStringProperty();
+            Console.WriteLine("\nAnonymous object:");
+            anonymousObject.ToStringProperty();
+            Console.WriteLine("\nDateTime.Now:");
+            DateTime.Now.ToStringProperty();
 
             //int? num1 = null;
             ////num1 = 8;
@@ -49,7 +49,7 @@ namespace Lesson4
             //Console.WriteLine("========================");
             //foreach (MyDelegate d in myDel.GetInvocationList())
             //    Console.WriteLine(d());
-            new Program().Main2();
+            //new Program().Main2();
         }
 
         partial void Main2();

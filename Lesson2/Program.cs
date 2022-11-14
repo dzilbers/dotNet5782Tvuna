@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 
 namespace Lesson2
 {
@@ -13,13 +14,19 @@ namespace Lesson2
         /// <param name="args">command line words</param>
         static void Main(string[] args)
         {
+            OtherClass obj = (OtherClass)5;
+
+            IDoing doing = new SomeClass();
+            doing.DoIt(5);
+            if (doing is SomeClass)
+                Console.WriteLine("OK");
+            SomeClass sc = (SomeClass)doing;
+
             int i1;
             A a = new();
             Console.WriteLine(a);
-
             //a.F = 11;
             Console.WriteLine(a.F);
-
             Console.WriteLine(10.Equals(8));
 
             S s;
@@ -109,11 +116,21 @@ namespace Lesson2
 
         public int H { get; set; }
 
-        public static int sf = 1;
-        public override string ToString()
+        private int num;
+        // public int Num => num;
+        public int Num
         {
-            return $"f={f}";
+            //get { return num; }
+            get => num; set => num = value;
+            // set { num = value; }
         }
+
+        public DateTime Today { get => DateTime.Now; }
+
+        public int Num2 { get; private set; } = 8;
+
+        public static int sf = 1;
+        public override string ToString() => $"f={f}";
     }
 
     struct S
@@ -135,10 +152,28 @@ namespace Lesson2
 
     class OtherClass
     {
+        private int field;
+        private OtherClass(int p) => field = p;
+
+        public static explicit operator OtherClass(int param)
+            => new OtherClass(param);
+
+        void printNumbers(params int[] numbers)
+        {
+            foreach (int n in numbers)
+                Console.WriteLine(n);
+        }
+
         void some(int num)
         {
             IDoing obj = new SomeClass();
             Console.WriteLine(obj.DoIt(0));
+
+            printNumbers(1, 2, 3, 4);
+
+            f2(6, n2: 5, s: "Yossi");
         }
+
+        void f2(int n, string s, int n2) { }
     }
 }
